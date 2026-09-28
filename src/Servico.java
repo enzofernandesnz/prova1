@@ -1,6 +1,6 @@
 class Servico {
 private String nome;
-private double tempoEstimado; // em horas
+private double tempoEstimado; 
 private double valor;
 private String categoria;
 
