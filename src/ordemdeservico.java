@@ -4,10 +4,10 @@ private String nomeCliente;
 private String modeloVeiculo;
 private String placaVeiculo;
 private String data;
-private String status; // "aberta", "em execução", "finalizada"
+private String status;
 private double valorEstimado;
 private Servico servico;
-private Box box; // Nulo se aberta
+private Box box; 
 
 public OrdemDeServico(String codigo, String nomeCliente, String modeloVeiculo, String placaVeiculo,
 String data, double valorEstimado, Servico servico) {
@@ -16,7 +16,7 @@ this.nomeCliente = nomeCliente;
 this.modeloVeiculo = modeloVeiculo;
 this.placaVeiculo = placaVeiculo;
 this.data = data;
-this.status = "aberta"; // Regra: Inicializa como aberta e sem box
+this.status = "aberta";
 this.valorEstimado = valorEstimado;
 this.servico = servico;
 this.box = null;
