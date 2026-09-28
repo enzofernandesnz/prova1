@@ -15,7 +15,7 @@ int opcao;
 do {
 exibirMenu();
 opcao = scanner.nextInt();
-scanner.nextLine(); // limpar buffer
+scanner.nextLine(); 
 
 switch (opcao) {
 case 1:
@@ -53,12 +53,12 @@ scanner.nextLine();
 }
 
 private static void inicializarDados() {
-// Criando 3 mecânicos obrigatórios
+
 mecanicos.add(new Mecanico("Carlos Silva", "111.222.333-44", "Motor", "(31) 98888-1111"));
 mecanicos.add(new Mecanico("Ana Souza", "222.333.444-55", "Suspensão", "(31) 97777-2222"));
 mecanicos.add(new Mecanico("Marcos Oliveira", "333.444.555-66", "Elétrica", "(31) 96666-3333"));
 
-// Criando 3 boxes obrigatórios
+
 boxes.add(new Box(1, "Motor", 2, "Galpão A - Setor Norte"));
 boxes.add(new Box(2, "Suspensão", 1, "Galpão A - Setor Sul"));
 boxes.add(new Box(3, "Elétrica", 2, "Galpão B - Setor Leste"));
@@ -67,9 +67,7 @@ System.out.println(">>> 3 Mecânicos e 3 Boxes inicializados automaticamente com
 }
 
 private static void exibirMenu() {
-System.out.println("========================================");
 System.out.println(" SISTEMA DE GERENCIAMENTO - OFICINA ");
-System.out.println("========================================");
 System.out.println("1. Cadastrar Ordem de Serviço");
 System.out.println("2. Associar um Mecânico a um Box");
 System.out.println("3. Atribuir Ordem de Serviço a um Box");
@@ -103,7 +101,7 @@ System.out.print("Tempo Estimado (horas): ");
 double tempo = scanner.nextDouble();
 System.out.print("Valor do Serviço (R$): ");
 double valor = scanner.nextDouble();
-scanner.nextLine(); // limpar buffer
+scanner.nextLine(); 
 
 Servico servico = new Servico(nomeServico, tempo, valor, categoria);
 OrdemDeServico os = new OrdemDeServico(codigo, cliente, modelo, placa, data, valor, servico);
@@ -277,9 +275,7 @@ break;
 }
 
 if (osEncontrada != null) {
-System.out.println("\n========================================");
 System.out.println(" DETALHES COMPLETOS DA OS ");
-System.out.println("========================================");
 System.out.println("Código: " + osEncontrada.getCodigo());
 System.out.println("Cliente: " + osEncontrada.getNomeCliente());
 System.out.println("Veículo: " + osEncontrada.getModeloVeiculo() + " | Placa: " + osEncontrada.getPlacaVeiculo());
